@@ -5,52 +5,45 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>Cucumber</artifactId>
+    <artifactId>CucumberB6</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>22</maven.compiler.source>
-        <maven.compiler.target>22</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <dependencies>
-            <!--Sen şu ana kadar hep library leri mavendan projene yükledin, peki
-              projeyi birine gönderdin, o ne demen gerekiyor, yüklediğin bütün dosyalar
-              projeyle birlikte gitti proje dosyası oldukça kabarık oldu.
-              Ayrıca , her eklemeyi Menuye girerek elle yaptın, artık buna ihtiyacın yok
-              MAVEN proje ile yeni dönem başladı sen aşağıya yaz-->
-
-            <!-- Bana bi Selenium  -->
-            <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-            <dependency>
-                <groupId>org.seleniumhq.selenium</groupId>
-                <artifactId>selenium-java</artifactId>
-                <version>4.25.0</version>
-            </dependency>
-
-
-            <!-- Bana bi Cucumber  -->
-            <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
-            <dependency>
-                <groupId>io.cucumber</groupId>
-                <artifactId>cucumber-java</artifactId>
-                <version>7.19.0</version>
-            </dependency>
-
-            <!-- Bana bi TestNG  -->
-            <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-            <dependency>
-                <groupId>org.testng</groupId>
-                <artifactId>testng</artifactId>
-                <version>7.10.2</version>
-                <scope>test</scope>
-            </dependency>
-
-            <!-- Bana bi n lazımsa  -->
-
-            <!-- BBen sana hepsini alıp getireyim, projeyi başkasına gönderdiğinde o da
-            sadece kodları alması  yeterli, alan kişi de bana gerekli dosyaları al desin ben
-            yine onun bilgisayarına yükliyeyim-->
-        </dependencies>
     </properties>
+
+    <dependencies>
+        <!--Sen şu ana kadar hep library leri mavendan projene yükledin, peki
+          projeyi birine gönderdin, o ne demen gerekiyor, yüklediğin bütün dosyalar
+          projeyle birlikte gitti proje dosyası oldukça kabarık oldu.
+          Ayrıca , her eklemeyi Menuye girerek elle yaptın, artık buna ihtiyacın yok
+          MAVEN proje ile yeni dönem başladı sen aşağıya yaz-->
+
+        <!-- Bana bi Selenium  -->
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.25.0</version>
+        </dependency>
+
+        <!-- Bana bi Cucumber  -->
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.19.0</version>
+        </dependency>
+
+        <!-- Bana bi TestNG  -->
+        <!-- Bana bi n lazımsa  -->
+
+        <!-- BBen sana hepsini alıp getireyim, projeyi başkasına gönderdiğinde o da
+        sadece kodları alması  yeterli, alan kişi de bana gerekli dosyaları al desin ben
+        yine onun bilgisayarına yükliyeyim-->
+
+    </dependencies>
 
 </project>
