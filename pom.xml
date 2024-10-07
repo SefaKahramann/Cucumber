@@ -35,6 +35,7 @@
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
             <version>7.20.0</version>
+            <scope>test</scope>
         </dependency>
 
         <!-- Bana bi TestNG  -->
@@ -49,6 +50,7 @@
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
             <version>7.20.0</version>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
