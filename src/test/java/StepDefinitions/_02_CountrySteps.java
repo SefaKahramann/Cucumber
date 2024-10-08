@@ -13,7 +13,7 @@ public class _02_CountrySteps {
     public void createACountry() {
     }
 
-    @Then("Succes message should be displayed")
+    @Then("Success message should be displayed")
     public void succesMessageShouldBeDisplayed() {
     }
 }

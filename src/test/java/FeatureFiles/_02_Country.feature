@@ -7,4 +7,4 @@ Feature: Country Functionality
     Then User should login successfully
     And Navigate to Country
     When Create a country
-    Then Succes message should be displayed
+    Then Success message should be displayed
