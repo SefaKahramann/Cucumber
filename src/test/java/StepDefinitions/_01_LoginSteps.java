@@ -4,11 +4,6 @@ import Pages.DialogContent;
 import Utilities.ConfigReader;
 import Utilities.GWD;
 import io.cucumber.java.en.*; //* hepsi demek
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-
-import java.time.Duration;
 
 public class _01_LoginSteps {
 
