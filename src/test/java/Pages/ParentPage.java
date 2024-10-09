@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.GWD;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -31,7 +32,13 @@ public class ParentPage {
     }
 
     public void verifyContainsText(WebElement element,String value){
+        wait.until(ExpectedConditions.visibilityOf(element));
         wait.until(ExpectedConditions.textToBePresentInElement(element,value));
+        Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()),"Giriş başarısız");
+    }
+
+    public void verifyMessageContainsText(WebElement element,String value){
+        wait.until(ExpectedConditions.numberOfElementsToBeLessThan(By.xpath("//hot-toast-container/div/div/div/*"),0));
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()),"Giriş başarısız");
     }
 }
