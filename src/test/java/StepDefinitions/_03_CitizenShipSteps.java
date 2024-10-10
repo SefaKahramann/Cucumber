@@ -3,6 +3,7 @@ package StepDefinitions;
 import Pages.DialogContent;
 import Pages.LeftNav;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.apache.commons.lang3.RandomStringUtils;
 
@@ -28,10 +29,20 @@ public class _03_CitizenShipSteps {
     }
 
     @When("Create a Citizenships name as {string} shortname as {string}")
-    public void createACitizenshipsNameAsShortnameAs(String arg0, String arg1) {
+    public void createACitizenshipsNameAsShortnameAs(String name, String shortName) {
         dc.myClick(dc.addButton);
-        dc.mySendKeys(dc.inputName,arg0 );
-        dc.mySendKeys(dc.inputShortName,arg1);
+        dc.mySendKeys(dc.inputName, name);
+        dc.mySendKeys(dc.inputShortName, shortName);
         dc.myClick(dc.saveButton);
+    }
+
+    @Then("Already exists message should be displayed")
+    public void allReadyExitMessageShouldBeDisplayed() {
+        dc.verifyMessageContainsText("already exists");
+    }
+
+    @When("user delete name as {string}")
+    public void userDeleteNameAs(String name) {
+        dc.deleteItem(name);
     }
 }

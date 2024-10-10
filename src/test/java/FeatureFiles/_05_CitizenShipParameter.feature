@@ -8,10 +8,10 @@ Feature: Citizenships Functionality
     Then User should login successfully
     And Navigate to Citizenships
 
-  Scenario:
+  Scenario: Create a Citizenship with parameter 1
     When Create a Citizenships
     Then Success message should be displayed
 
-  Scenario:
+  Scenario:Create a Citizenship with parameter 2
     When Create a Citizenships name as "SefaCitizenships123" shortname as "123CitizenSefa"
     Then Success message should be displayed

@@ -45,8 +45,28 @@ public class DialogContent extends ParentPage {
     @FindBy(tagName = "mat-panel-description")
     public WebElement messageBox;
 
+    @FindBy(xpath = "//ms-text-field[contains(@placeholder,'FIELD.NAME')]/input")
+    public WebElement searchInput;
+
+    @FindBy(xpath = "//ms-search-button//button")
+    public WebElement searchBtn;
+
+    @FindBy(xpath = "//ms-delete-button//button")
+    public WebElement deleteBtn;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement deleteDialogBtn;
+
     public void verifyMessageContainsText(String value){
         wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//hot-toast-container/div/div/div//*"),0));
         Assert.assertTrue( this.messageBox.getAttribute("innerHTML").toLowerCase().contains(value.toLowerCase()));
+    }
+
+    public void deleteItem(String name){
+        mySendKeys(searchInput,name);
+        myClick(searchBtn);
+        wait.until(ExpectedConditions.elementToBeClickable(this.searchBtn));
+        myClick(deleteBtn);
+        myClick(deleteDialogBtn);
     }
 }

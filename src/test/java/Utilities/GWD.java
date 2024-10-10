@@ -21,7 +21,7 @@ public class GWD {// Genel Web Driver
     public static void quitDriver(){
         //test sonucu ekranı bir miktar beklesin diye
         try {
-            Thread.sleep(4);
+            Thread.sleep(5);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
