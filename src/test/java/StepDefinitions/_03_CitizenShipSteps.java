@@ -27,7 +27,7 @@ public class _03_CitizenShipSteps {
         dc.myClick(dc.saveButton);
     }
 
-    @When("Create a Citizenships name as{string} shortname as {string}")
+    @When("Create a Citizenships name as {string} shortname as {string}")
     public void createACitizenshipsNameAsShortnameAs(String arg0, String arg1) {
         dc.myClick(dc.addButton);
         dc.mySendKeys(dc.inputName,arg0 );

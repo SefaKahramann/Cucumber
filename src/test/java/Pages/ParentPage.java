@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
+import java.util.List;
 
 public class ParentPage {
     WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
@@ -36,9 +37,20 @@ public class ParentPage {
         wait.until(ExpectedConditions.textToBePresentInElement(element,value));
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()),"Giriş başarısız");
     }
+    //örnek olarak bırakıldı
+    public void verifyMessageContainsTextInceleme(String value){
+        //Problem : mesajın hızlı çıkıp kaybolması dolayısıyla getTExt in oluşamaması ve assert yapamamamız
+        //Amaç : mesajın çıktığı noktadaki elementin bu mesajını başka nasıl assert yapabilirim
+        wait.until(ExpectedConditions.numberOfElementsToBeLessThan(By.xpath("//hot-toast-container/div/div/div//*"),0));
+//        for (WebElement e :messageBoxElement ){
+//            System.out.println("->" +e.getText()+"<->"+e.getAccessibleName()+"<->"+e.getTagName());
+//        }
+        WebElement messageBoxParent2=GWD.getDriver().findElement(By.tagName("mat-panel-description"));
+//        System.out.println("messageBoxParent2.getText() = " + messageBoxParent2.getText()); // ekranda gözüken text
+//        System.out.println("messageBoxParent2.getAccessibleName() = " + messageBoxParent2.getAccessibleName()); // ekrandan ulaşılabilen her bilgisi , sana html den veriyor
+//        System.out.println("messageBoxParent2.getTagName() = " + messageBoxParent2.getTagName()); // tag name
+//        System.out.println("messageBoxParent2.getAttribute(\"innerHTML\") = " + messageBoxParent2.getAttribute("innerHTML")); // taglerinin arasındaki html kodu
 
-    public void verifyMessageContainsText(WebElement element,String value){
-        wait.until(ExpectedConditions.numberOfElementsToBeLessThan(By.xpath("//hot-toast-container/div/div/div/*"),0));
-        Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()),"Giriş başarısız");
+        Assert.assertTrue(messageBoxParent2.getAttribute("innerHTML").toLowerCase().contains(value.toLowerCase()));
     }
 }

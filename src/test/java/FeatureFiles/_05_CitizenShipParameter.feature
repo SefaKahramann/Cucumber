@@ -13,5 +13,5 @@ Feature: Citizenships Functionality
     Then Success message should be displayed
 
   Scenario:
-    When Create a Citizenships name as"SefaCitizenships123" shortname as "123CitizenSefa"
+    When Create a Citizenships name as "SefaCitizenships123" shortname as "123CitizenSefa"
     Then Success message should be displayed

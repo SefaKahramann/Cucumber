@@ -5,8 +5,6 @@ import Pages.LeftNav;
 import io.cucumber.java.en.*;
 import org.apache.commons.lang3.RandomStringUtils;
 
-import java.util.Random;
-
 public class _02_CountrySteps {
     LeftNav ln=new LeftNav();
     DialogContent dc=new DialogContent();
@@ -31,7 +29,7 @@ public class _02_CountrySteps {
 
     @Then("Success message should be displayed")
     public void successMessageShouldBeDisplayed() {
-        dc.verifyContainsText(dc.successfullyMsg, "successfully");
+        dc.verifyMessageContainsText("success");
     }
 
     @When("Create a country name as {string} code as {string}")
