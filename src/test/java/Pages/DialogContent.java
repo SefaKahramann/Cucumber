@@ -57,6 +57,15 @@ public class DialogContent extends ParentPage {
     @FindBy(xpath = "//button[@type='submit']")
     public WebElement deleteDialogBtn;
 
+    @FindBy(css = "//ms-text-field[@formcontrolname='budgetAccountIntegrationCode']//input")
+    public WebElement IntegrationInput;
+
+    @FindBy(xpath = "//ms-integer-field[@formcontrolname='priority']//input")
+    public WebElement priorityInput;
+
+    @FindBy(xpath = "//mat-slide-toggle[@formcontrolname='active']")
+    public WebElement toggleBar;
+
     public void verifyMessageContainsText(String value){
         wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//hot-toast-container/div/div/div//*"),0));
         Assert.assertTrue( this.messageBox.getAttribute("innerHTML").toLowerCase().contains(value.toLowerCase()));
@@ -68,5 +77,20 @@ public class DialogContent extends ParentPage {
         wait.until(ExpectedConditions.elementToBeClickable(this.searchBtn));
         myClick(deleteBtn);
         myClick(deleteDialogBtn);
+    }
+
+    public WebElement getWebElement(String strElementName){
+        switch (strElementName)
+        {
+            case "addButton" : return this.addButton;
+            case "nameInput" : return this.inputName;
+            case "codeInput" : return this.inputCode;
+            case "saveButton" : return this.saveButton;
+            case "shortName" : return this.inputShortName;
+            case "integration" : return this.IntegrationInput;
+            case "priority" : return this.priorityInput;
+            case "toggleBar" : return this.toggleBar;
+        }
+        return null;
     }
 }

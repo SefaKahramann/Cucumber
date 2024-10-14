@@ -9,7 +9,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.time.Duration;
-import java.util.List;
 
 public class ParentPage {
     WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
