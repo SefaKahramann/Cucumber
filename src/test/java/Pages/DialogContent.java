@@ -63,7 +63,7 @@ public class DialogContent extends ParentPage {
     @FindBy(xpath = "//ms-integer-field[@formcontrolname='priority']//input")
     public WebElement priorityInput;
 
-    @FindBy(xpath = "//mat-slide-toggle[@formcontrolname='active']")
+    @FindBy(xpath = "//mat-slide-toggle[@formcontrolname='active']//button")
     public WebElement toggleBar;
 
     public void verifyMessageContainsText(String value){
