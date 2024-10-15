@@ -66,6 +66,21 @@ public class DialogContent extends ParentPage {
     @FindBy(xpath = "//mat-slide-toggle[@formcontrolname='active']//button")
     public WebElement toggleBar;
 
+    @FindBy(xpath = "(//ms-save-button[@class='ng-star-inserted']//button)[2]")
+    public WebElement saveCloseBtn;
+
+    @FindBy(xpath = "(//ms-add-button[contains(@tooltip,'.TITLE.ADD')]//button)[2]")
+    public WebElement citiesAddBtn;
+
+    @FindBy(xpath = "//mat-form-field[@formgroupname='country']/div")
+    public WebElement countrySelectBtn;
+
+    @FindBy(xpath = "//div[@role='listbox']/mat-option")
+    public WebElement firstChoice;
+
+    @FindBy(xpath = " //mat-chip-grid[@formcontrolname='roles']")
+    public WebElement roleBtn;
+
     public void verifyMessageContainsText(String value){
         wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//hot-toast-container/div/div/div//*"),0));
         Assert.assertTrue( this.messageBox.getAttribute("innerHTML").toLowerCase().contains(value.toLowerCase()));
@@ -80,16 +95,22 @@ public class DialogContent extends ParentPage {
     }
 
     public WebElement getWebElement(String strElementName){
-        switch (strElementName)
+        switch (strElementName.trim())
         {
             case "addButton" : return this.addButton;
             case "nameInput" : return this.inputName;
             case "codeInput" : return this.inputCode;
             case "saveButton" : return this.saveButton;
+            case "saveAndCloseButton" : return this.saveCloseBtn;
             case "shortName" : return this.inputShortName;
             case "integration" : return this.IntegrationInput;
             case "priority" : return this.priorityInput;
             case "toggleBar" : return this.toggleBar;
+            case "citiesAddBtn":return this.citiesAddBtn;
+            case "countrySelectBtn":return this.countrySelectBtn;
+            case "firstChoice":return this.firstChoice;
+            case "role":return this.roleBtn;
+
         }
         return null;
     }

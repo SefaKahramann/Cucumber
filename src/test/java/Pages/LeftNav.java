@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LeftNav extends ParentPage{
+public class LeftNav extends ParentPage {
 
     public LeftNav() {
-        PageFactory.initElements(GWD.getDriver() ,this);
+        PageFactory.initElements(GWD.getDriver(), this);
     }
 
     @FindBy(xpath = "(//span[text()='Setup'])[1]")
@@ -32,17 +32,43 @@ public class LeftNav extends ParentPage{
     @FindBy(xpath = "(//span[text()='Fees'])[1]")
     public WebElement FeesBtn;
 
-    public WebElement getWebElement(String strElementName){
-      switch (strElementName)
-      {
-          case "setup" : return this.setupBtn;
-          case "parameters" : return this.parametersBtn;
-          case "countries" : return this.countriesBtn;
-          case "citizenship": return this.citizenshipsBtn;
-          case "states" : return this.statesBtn;
-          case "nationalities" : return this.nationalitiesBtn;
-          case "Fees" : return this.FeesBtn;
-      }
-      return null;
+    @FindBy(xpath = "(//span[text()='Cities'])[1]")
+    public WebElement citiesBtn;
+
+    @FindBy(xpath = "(//span[text()='Inventory'])[1]")
+    public WebElement inventoryBtn;
+
+    @FindBy(xpath = "(//span[text()='Setup'])[4]")
+    public WebElement inventorySetupBtn;
+
+    @FindBy(xpath = "(//span[text()='Item Categories'])[1]")
+    public WebElement itemCategoriesBtn;
+
+    public WebElement getWebElement(String strElementName) {
+        switch (strElementName) {
+            case "setup":
+                return this.setupBtn;
+            case "parameters":
+                return this.parametersBtn;
+            case "countries":
+                return this.countriesBtn;
+            case "citizenship":
+                return this.citizenshipsBtn;
+            case "states":
+                return this.statesBtn;
+            case "nationalities":
+                return this.nationalitiesBtn;
+            case "Fees":
+                return this.FeesBtn;
+            case "cities":
+                return this.citiesBtn;
+            case "inventory":
+                return this.inventoryBtn;
+            case "itemCategories":
+                return this.itemCategoriesBtn;
+            case "inventorySetup":
+                return this.inventorySetupBtn;
+        }
+        return null;
     }
 }

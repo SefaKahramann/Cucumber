@@ -89,8 +89,8 @@ Feature: DataTable  Functionality
 
 
     And Click on the Element in Dialog
-      | toggleBar  |
-      | saveButton |
+      | toggleBar          |
+      | saveAndCloseButton |
 
     Then Success message should be displayed
 
