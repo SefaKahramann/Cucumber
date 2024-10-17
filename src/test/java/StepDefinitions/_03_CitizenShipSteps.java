@@ -11,15 +11,15 @@ public class _03_CitizenShipSteps {
     LeftNav ln=new LeftNav();
     DialogContent dc =new DialogContent();
 
-    @And("Navigate to Citizenships")
-    public void navigateToCitizenships() {
+    @And("Navigate to CitizenShips")
+    public void navigateToCitizenShips() {
         ln.myClick(ln.setupBtn);
         ln.myClick(ln.parametersBtn);
         ln.myClick(ln.citizenshipsBtn);
     }
 
-    @When("Create a Citizenships")
-    public void createACitizenships() {
+    @When("Create a CitizenShips")
+    public void createACitizenShips() {
         String randomName= RandomStringUtils.randomAlphanumeric(8);
         String randomShortName= RandomStringUtils.randomAlphabetic(11);
         dc.myClick(dc.addButton);
