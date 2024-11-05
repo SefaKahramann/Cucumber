@@ -79,6 +79,12 @@
             <version>4.1.0</version>
         </dependency>
 
+        <!-- JDBC - MySql için eklendi -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.18</version>
+        </dependency>
         <!-- BBen sana hepsini alıp getireyim, projeyi başkasına gönderdiğinde o da
         sadece kodları alması  yeterli, alan kişi de bana gerekli dosyaları al desin ben
         yine onun bilgisayarına yükliyeyim-->
