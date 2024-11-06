@@ -14,12 +14,12 @@ public class _10_Soru extends JDBCParent {
         ResultSetMetaData rsmd = rs.getMetaData();
 
         for (int i = 1; i <= rsmd.getColumnCount(); i++) {
-            System.out.print(rsmd.getColumnName(i) + " ");
-
+            System.out.print(rsmd.getColumnName(i) + "\t");
         }
-        System.out.println();
+        System.out.println(); // başlıklardan sonra 1 satır atla
+
         while (rs.next()) {
-            for (int j = 1; j <= rsmd.getColumnCount(); j++) {
+            for (int j = 1; j <= rsmd.getColumnCount(); j++) { // bu bölüm her satırdaki kolonları yazdırır
                 System.out.print(rs.getString(j) + " ");
             }
             System.out.println();
