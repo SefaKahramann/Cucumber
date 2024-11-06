@@ -3,7 +3,7 @@ Feature: Citizenships Functionality
     Given Navigate to Campus
     When Enter username and password and click login button
     Then User should login successfully
-    And Navigate to Citizenships
+    And Navigate to CitizenShips
 
   Scenario Outline: Create a Citizenship with parameter 1 pozitif test
     When Create a Citizenships name as "<name>" shortname as "<shortname>"
