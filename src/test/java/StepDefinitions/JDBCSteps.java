@@ -4,10 +4,7 @@ import Pages.DialogContent;
 
 import Utilities.DBUtility;
 import io.cucumber.java.en.Then;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class JDBCSteps {
