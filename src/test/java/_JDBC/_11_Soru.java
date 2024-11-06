@@ -10,17 +10,14 @@ public class _11_Soru extends JDBCParent{
 // kendisine gönderilen bir select sonucu list olarak döndüren
     // methodu yazınız
     public static void main(String[] args) throws SQLException {
-        DbConnectionOpen();
-
         List<List<String>> data=getData("select * from language;");
 
         for (List<String> row : data){
             System.out.println(row);
         }
-
-        DbConnectionClose();
     }
     public static List<List<String>> getData(String select){
+        DbConnectionOpen();
         List<List<String>> getData=new ArrayList<>();
         try {
             ResultSet resultSet = statement.executeQuery(select);
@@ -39,6 +36,7 @@ public class _11_Soru extends JDBCParent{
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+        DbConnectionClose();
         return getData;
     }
 }
