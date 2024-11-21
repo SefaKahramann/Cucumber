@@ -1,6 +1,7 @@
 package Pages;
 
 import Utilities.GWD;
+import Utilities.GWD_New;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -11,7 +12,7 @@ import org.testng.Assert;
 import java.time.Duration;
 
 public class ParentPage {
-    WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
+    WebDriverWait wait=new WebDriverWait(GWD_New.getDriver(), Duration.ofSeconds(20));
 
     public void mySendKeys(WebElement element ,String text){
         wait.until(ExpectedConditions.visibilityOf(element));
@@ -27,7 +28,7 @@ public class ParentPage {
     }
 
     public void scrollToElement(WebElement element){
-        JavascriptExecutor js = (JavascriptExecutor) GWD.getDriver();
+        JavascriptExecutor js = (JavascriptExecutor) GWD_New.getDriver();
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
 
@@ -44,7 +45,7 @@ public class ParentPage {
 //        for (WebElement e :messageBoxElement ){
 //            System.out.println("->" +e.getText()+"<->"+e.getAccessibleName()+"<->"+e.getTagName());
 //        }
-        WebElement messageBoxParent2=GWD.getDriver().findElement(By.tagName("mat-panel-description"));
+        WebElement messageBoxParent2=GWD_New.getDriver().findElement(By.tagName("mat-panel-description"));
 //        System.out.println("messageBoxParent2.getText() = " + messageBoxParent2.getText()); // ekranda gözüken text
 //        System.out.println("messageBoxParent2.getAccessibleName() = " + messageBoxParent2.getAccessibleName()); // ekrandan ulaşılabilen her bilgisi , sana html den veriyor
 //        System.out.println("messageBoxParent2.getTagName() = " + messageBoxParent2.getTagName()); // tag name

@@ -2,6 +2,7 @@ package StepDefinitions;
 
 import Utilities.ExcelUtility;
 import Utilities.GWD;
+import Utilities.GWD_New;
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
@@ -21,6 +22,6 @@ public class Hooks {
 //            senaryo.attach(fileInMemory, "image/png", "screenshot name");
 //        }
 
-        GWD.quitDriver();
+        GWD_New.quitDriver();
     }
 }

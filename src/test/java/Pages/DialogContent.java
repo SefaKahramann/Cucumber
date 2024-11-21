@@ -2,6 +2,7 @@ package Pages;
 
 
 import Utilities.GWD;
+import Utilities.GWD_New;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,7 +15,7 @@ import java.util.List;
 public class DialogContent extends ParentPage {
 
     public DialogContent() {
-        PageFactory.initElements(GWD.getDriver() ,this);
+        PageFactory.initElements(GWD_New.getDriver() ,this);
     }
 
     @FindBy(css ="[formcontrolname='username']")
