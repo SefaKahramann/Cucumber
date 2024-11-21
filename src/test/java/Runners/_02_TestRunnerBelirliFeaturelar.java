@@ -9,6 +9,7 @@ import io.cucumber.testng.CucumberOptions;
                     "src/test/java/FeatureFiles/_03_CitizenShipSteps.feature"
         },
         glue ={"StepDefinitions"}
+        ,plugin= {"json:target/cucumber/cucumber.json"}
 )
 public class _02_TestRunnerBelirliFeaturelar extends AbstractTestNGCucumberTests {
 }

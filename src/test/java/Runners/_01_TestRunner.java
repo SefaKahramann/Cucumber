@@ -6,6 +6,7 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = {"src/test/java/FeatureFiles/_01_Login.feature"},// buraya feature files in path yolunu yazıyoruz
         glue = {"StepDefinitions"} // Step dedfitinons ın klasörü adı yazılıyor.
+        ,plugin= {"json:target/cucumber/cucumber.json"}
 )
 public class _01_TestRunner extends AbstractTestNGCucumberTests {
     // Bu class tiplerine Runner Class lar denir
